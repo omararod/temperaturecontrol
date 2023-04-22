@@ -4,7 +4,7 @@ project(temperaturecontrol VERSION 1.0.0)
 #C++14 required by GoogleTest
 set(CMAKE_CXX_STANDARD 14)
 
-#Get GoogleTest. From https://google.github.io/googletest/quickstart-cmake.html
+#Get GoogleTest. Based on the tutorial at https://google.github.io/googletest/quickstart-cmake.html
 include(FetchContent)
 FetchContent_Declare(
   googletest
@@ -17,3 +17,8 @@ FetchContent_MakeAvailable(googletest)
 
 
 add_library(temperaturesensor TemperatureSensor.cpp)
+add_library(acsystem ACSystem.cpp)
+add_library(temperaturecontrol TemperatureControl.cpp)
+
+add_executable(tests test_temperaturecontrol.cpp)
+target_link_libraries(tests PRIVATE GTest::gtest_main temperaturecontrol)

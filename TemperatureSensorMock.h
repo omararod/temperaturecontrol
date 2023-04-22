@@ -4,10 +4,9 @@
 
 #include "ITemperatureSensor.h"
 
-class TemperatureSensorMock : ITemperatureSensor
+class TemperatureSensorMock : public ITemperatureSensor
 {
     public:
-    virtual ~ITemperatureSensor() = default;
-    MOCK_METHOD(float, GetTemperature, (), (override));
+        MOCK_METHOD(float, GetTemperature, (), (override));
 };
 
