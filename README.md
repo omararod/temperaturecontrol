@@ -33,3 +33,5 @@ Run example application
 ========================
 Run the generated executable. For instance, on Linux:
     ./app
+
+The application runs on an infinite loop. Terminate the app (e.g. CTRL+C) to stop it
