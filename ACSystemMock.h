@@ -6,6 +6,7 @@
 #include "IACSystem.h"
 class ACSystemMock : public IACSystem
 {
-    MOCK_METHOD(void, TurnOn,(), (override));
-    MOCK_METHOD(void, TurnOff,(), (override));
+    public:
+        MOCK_METHOD(void, TurnOn,(), (override));
+        MOCK_METHOD(void, TurnOff,(), (override));
 };

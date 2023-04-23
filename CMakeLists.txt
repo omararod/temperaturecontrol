@@ -21,4 +21,8 @@ add_library(acsystem ACSystem.cpp)
 add_library(temperaturecontrol TemperatureControl.cpp)
 
 add_executable(tests test_temperaturecontrol.cpp)
-target_link_libraries(tests PRIVATE GTest::gtest_main temperaturecontrol)
+target_link_libraries(tests PRIVATE GTest::gtest_main GTest::gmock_main temperaturecontrol)
+
+add_executable(app AppExample.cpp)
+target_link_libraries(app temperaturesensor acsystem temperaturecontrol)
+

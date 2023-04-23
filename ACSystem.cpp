@@ -1,11 +1,18 @@
+#include <iostream>
 #include "ACSystem.h"
+ACSystem::ACSystem(std::string label) : m_label(label)
+{}
 
 void ACSystem::TurnOff()
 {
-    return;
+    std::cout<<"====================================="<< std::endl;
+    std::cout<<"Turning "+ m_label +" OFF "<< std::endl; 
+    std::cout<<"====================================="<< std::endl;
 }
 
 void ACSystem::TurnOn()
 {
-    return;
+    std::cout<<"====================================="<< std::endl;
+    std::cout<<"Turning "+ m_label +" ON "<< std::endl; 
+    std::cout<<"====================================="<< std::endl;
 }
